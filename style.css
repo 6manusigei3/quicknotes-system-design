@@ -1,0 +1,40 @@
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #182230;
+  background: #f3f6fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+.container { width: min(760px, calc(100% - 2rem)); margin: auto; padding: 2.5rem 0; }
+.eyebrow { color: #3759a5; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
+h1 { margin: 0; font-size: clamp(2.2rem, 7vw, 3.3rem); }
+h2 { font-size: 1.2rem; }
+.intro { color: #586579; }
+.status { padding: .85rem 1rem; border: 1px solid #d4dce8; border-radius: .7rem; background: white; }
+.status.success { border-color: #a6dfc0; background: #ecfbf2; color: #17663a; }
+.status.error { border-color: #f0b6b6; background: #fff0f0; color: #a52222; }
+.panel, .note-card { padding: 1.25rem; border: 1px solid #e0e6ef; border-radius: .9rem; background: white; box-shadow: 0 4px 14px rgb(28 46 77 / 4%); }
+.panel { margin: 1.25rem 0 2rem; }
+form, .field { display: grid; gap: .6rem; }
+form { gap: 1rem; margin-top: 1rem; }
+label { font-size: .92rem; font-weight: 650; }
+input, textarea { width: 100%; padding: .75rem; border: 1px solid #cbd4e1; border-radius: .5rem; font: inherit; }
+textarea { resize: vertical; }
+input:focus, textarea:focus, button:focus-visible { outline: 3px solid #a9c5ff; outline-offset: 2px; }
+button { width: fit-content; padding: .7rem 1rem; border: 0; border-radius: .5rem; background: #2857b5; color: white; font: inherit; font-weight: 650; cursor: pointer; }
+button:hover:not(:disabled) { background: #1f458f; }
+button:disabled { cursor: wait; opacity: .6; }
+button.secondary { border: 1px solid #cbd4e1; background: white; color: #24334a; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+#notes-list { display: grid; gap: .85rem; margin: 1rem 0; padding: 0; list-style: none; }
+.note-card h3 { margin: 0 0 .45rem; overflow-wrap: anywhere; }
+.note-card p { color: #586579; white-space: pre-wrap; overflow-wrap: anywhere; }
+.note-actions { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1rem; }
+.note-id { color: #718096; font-size: .8rem; }
+button.delete-btn { border: 1px solid #e0aaaa; background: white; color: #a52222; }
+.empty-state { padding: 1.5rem; border: 1px dashed #cbd4e1; border-radius: .75rem; color: #586579; text-align: center; }
+footer { margin-top: 2.5rem; color: #718096; font-size: .85rem; text-align: center; }
+@media (max-width: 480px) {
+  .container { padding-top: 1.5rem; }
+  .panel, .note-card { padding: 1rem; }
+}
